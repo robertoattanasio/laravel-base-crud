@@ -1,0 +1,180 @@
+.debug,
+.debug * {
+    border: 1px solid black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkGray: #1a1a1a;
+}
+
+h2,
+h5 {
+    margin-top: 8px;
+}
+
+h5.details {
+    margin-top: 70px;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+ul a:last-child {
+    margin-right: 0;
+}
+
+.logo {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 300px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/jumbotron.jpeg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+}
+
+section.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+section.insertItem {
+    margin-top: 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+section.insertItem h3 {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+section.insertItem input {
+    margin-top: 20px;
+    padding: 7px 15px;
+    background-color: #ff5e1e;
+    border: none;
+    border-radius: 5px;
+    transition: 200ms ease-in-out;
+}
+
+section.insertItem input:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #ff5e1e;
+}
+
+.product-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.product-item {
+    position: relative;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-color: #262626;
+    border-radius: 5px;
+}
+
+.product-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+    color: white;
+}
+
+footer {
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGray);
+}
+
+p.zalando {
+    margin-top: 10px;
+}
