@@ -39,8 +39,15 @@ class DressController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {    
+    {     
         $data = $request->all();
+
+        $request->validate([
+            'brand' => 'required|max:50',
+            'type' => 'required|max:50',
+            'size' => 'required|max:4',
+            'price' => 'required||numeric',
+        ]);
 
         $new_dress = new Dress();
         $new_dress->brand = $data['brand'];
@@ -63,10 +70,12 @@ class DressController extends Controller
     {
         if ($id) {
             $dress = Dress::find($id);
-            $data = [
-                'dress' => $dress,
-            ];
-            return view('dresses.show', $data); 
+            // $data = [
+            //     'dress' => $dress,
+            // ];
+            // return view('dresses.show', $data);
+            return view('dresses.show', compact('dress'));
+
         }
         abort(404);
     }
