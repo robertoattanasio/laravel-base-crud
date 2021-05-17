@@ -3,7 +3,7 @@
 @section('css')
     <link rel="stylesheet" href="css/styles.css">
 
-@section('pageTitle', 'Dresses')
+@section('pageTitle', 'Prodotti')
     
 @section('content')
     <section class="title">
@@ -11,29 +11,36 @@
     </section>
 
     <div class="product-container">
-        @foreach ($dresses as $item)
+        @foreach ($dresses as $dress)
             <div class="product-item">
 
                 <div class="product-info">
-                    @if ($item['brand'] != '')
-                        <h2>{{$item['brand']}}</h2>   
+                    @if ($dress['brand'] != '')
+                        <h2>{{$dress['brand']}}</h2>   
                     @endif
 
-                    @if ($item['type'] != '')
-                        <h5>{{$item['type']}}</h5>   
+                    @if ($dress['type'] != '')
+                        <h5>{{$dress['type']}}</h5>   
                     @endif
 
-                    @if ($item['size'] != '')
-                        <h5>{{$item['size']}}</h5>   
+                    @if ($dress['size'] != '')
+                        <h5>{{$dress['size']}}</h5>   
                     @endif
                 
-                    @if ($item['price'] != '')
-                        <h5>{{$item['price']}}</h5>   
+                    @if ($dress['price'] != '')
+                        <h5>{{$dress['price']}} €</h5>   
                     @endif
 
-                    <h5 class="details">
-                        <a href="{{ route('dresses.show', [$item -> id] )}}">Dettagli</a>
-                    </h5>
+                    <div class="details">
+                        <h5 class="">
+                            <a href="{{ route('dresses.show', [$dress -> id] )}}">Dettagli</a>
+                        </h5>
+    
+                        <h5 class="">
+                            <a href="{{ route('dresses.edit', [$dress -> id] )}}">Modifica</a>
+                        </h5>
+
+                    </div>
                 </div>
             </div>
         @endforeach

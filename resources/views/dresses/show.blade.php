@@ -5,7 +5,6 @@
         <h1>Dettagli del prodotto</h1>
     </section>
     <div class="product-container">
-        {{-- @foreach ($dresses as $item) --}}
             <div class="product-item">
 
                 <div class="product-info">

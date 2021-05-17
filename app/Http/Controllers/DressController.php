@@ -88,19 +88,35 @@ class DressController extends Controller
      */
     public function edit($id)
     {
-        //
+        if ($id) {
+            $dress = Dress::find($id);
+
+            return view('dresses.edit', compact('dress'));
+
+        }
+        abort(404);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Dress $dress
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Dress $dress)
     {
-        //
+        $data = $request->all();
+        
+        $request->validate([
+            'brand' => 'required|max:50',
+            'type' => 'required|max:50',
+            'size' => 'required|max:4',
+            'price' => 'required||numeric',
+        ]);
+
+        $dress->update($data);
+        return redirect()->route('dresses.index');
     }
 
     /**

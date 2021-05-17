@@ -18,8 +18,11 @@ h5 {
     margin-top: 8px;
 }
 
-h5.details {
-    margin-top: 70px;
+.details {
+    margin-top: 40px;
+}
+
+.details h5 {
     font-size: 14px;
     font-weight: 200;
     text-transform: uppercase;
