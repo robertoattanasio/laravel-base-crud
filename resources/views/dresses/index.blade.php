@@ -7,7 +7,7 @@
     
 @section('content')
     <section class="title">
-        <h1>Dresses</h1>
+        <h1>Prodotti</h1>
     </section>
 
     <div class="product-container">
@@ -32,7 +32,7 @@
                     @endif
 
                     <h5 class="details">
-                        <a href="{{ route('dresses.show', [$item -> id] )}}">Details</a>
+                        <a href="{{ route('dresses.show', [$item -> id] )}}">Dettagli</a>
                     </h5>
                 </div>
             </div>

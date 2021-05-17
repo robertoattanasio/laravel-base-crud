@@ -20,6 +20,9 @@ h5 {
 
 h5.details {
     margin-top: 70px;
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 a:link,
@@ -126,7 +129,42 @@ section.insertItem input {
 section.insertItem input:hover {
     cursor: pointer;
     color: white;
+}
+
+.insertItem_form form {
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.form-group * {
+    width: 100%;
+    margin: 4px;
+    padding: 7px 15px;
+}
+
+.form-group *:last-child {
+    margin-top: 20px;
+    padding: 7px 15px;
     background-color: #ff5e1e;
+    border: none;
+    border-radius: 5px;
+    transition: 200ms ease-in-out;
+}
+
+.form-group *:last-child:hover {
+    cursor: pointer;
+    color: white;
 }
 
 .product-container {

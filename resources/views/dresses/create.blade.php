@@ -4,29 +4,30 @@
 
 
 @section('content')
-    <h1>Insert your Product</h1>
-
-    <form action="{{ route('dresses.store') }}" method="post">
-        @csrf
-        @method('POST')
-
-        <div class="form-group">
-
-            <label for="brand">Brand:</label>
-            <input type="text" name="brand" id="brand "placeholder="brand">
-
-            <label for="type">Type:</label>
-            <input type="text" name="type" id="type "placeholder="type">
-
-            <label for="size">Size:</label>
-            <input type="text" name="size" id="size "placeholder="size">
-
-            <label for="price">Price:</label>
-            <input type="float" name="price" id="price "placeholder="price">
+    <section class="title">
+        <h1>Inserisci il tuo prodotto</h1>
+    </section>
 
 
-            <input type="submit" value="Invia">
+    <section class="insertItem_form">
+        <form action="{{ route('dresses.store') }}" method="post">
+            @csrf
+            @method('POST')
 
-        </div>
-    </form>
+            <div class="form-group">
+
+                <input type="text" name="brand" id="brand "placeholder="brand">
+
+                <input type="text" name="type" id="type "placeholder="type">
+
+                <input type="text" name="size" id="size "placeholder="size">
+
+                <input type="float" name="price" id="price "placeholder="price">
+
+
+                <input type="submit" value="Invia">
+
+            </div>
+        </form>
+    </section>
 @endsection
