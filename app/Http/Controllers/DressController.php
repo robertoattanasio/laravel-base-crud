@@ -107,7 +107,7 @@ class DressController extends Controller
     public function update(Request $request, Dress $dress)
     {
         $data = $request->all();
-        
+
         $request->validate([
             'brand' => 'required|max:50',
             'type' => 'required|max:50',
@@ -125,8 +125,9 @@ class DressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Dress $dress)
     {
-        //
+        $dress->delete();
+        return redirect()->route('dresses.index');
     }
 }

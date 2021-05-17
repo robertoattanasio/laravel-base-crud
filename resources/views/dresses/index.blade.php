@@ -40,6 +40,13 @@
                             <a href="{{ route('dresses.edit', [$dress -> id] )}}">Modifica</a>
                         </h5>
 
+                        <form class="delete" action="{{ route('dresses.destroy', [$dress->id])}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" value="Cancella">
+
+                        </form>
+
                     </div>
                 </div>
             </div>
